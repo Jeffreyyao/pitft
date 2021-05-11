@@ -2,10 +2,15 @@
 
 import digitalio
 import board
+import gpiozero
  
 from adafruit_rgb_display.rgb import color565
 import adafruit_rgb_display.st7789 as st7789
  
+# Up and Down Buttons
+btnUp = gpiozero.Button(23)
+btnDown = gpiozero.Button(24)
+
 # Configuration for CS and DC pins for Raspberry Pi
 cs_pin = digitalio.DigitalInOut(board.CE0)
 dc_pin = digitalio.DigitalInOut(board.D25)
