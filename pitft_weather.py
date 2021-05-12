@@ -24,9 +24,9 @@ def update():
     icon = "https://"+re.findall('icon":"//.+?png',str(res))[0].replace('icon":"//',"")
 
     clear()
-    draw.bitmap((20,135//5*3),Image.open(requests.get(icon, stream=True).raw))
     draw.text((20,135//5), weather, font=font, fill="#FFFFFF")
     draw.text((20,135//5*2), temp, font=font, fill="#FFFFFF")
+    draw.bitmap((100,135//5*2),Image.open(requests.get(icon, stream=True).raw))
     display.image(image)
 
 update()
