@@ -34,3 +34,4 @@ update()
 while 1:
     if btnUp.is_pressed or btnDown.is_pressed:
         update()
+        sleep(5)
