@@ -18,7 +18,8 @@ def init():
     time.sleep(1)
 
 def choose(index,prev_index):
-    draw.text((20,135//5*(index+1)-15), options[index], font=font, fill="#0000FF")
+    draw.rectangle([0,135//5*(index+1)-15,width,135//5*(index+1)-15+20], fill="#FFFFFF")
+    draw.text((20,135//5*(index+1)-15), options[index], font=font, fill="#000000")
     draw.text((20,135//5*(prev_index+1)-15), options[prev_index], font=font, fill="#FFFFFF")
     display.image(image)
     time.sleep(0.5)
