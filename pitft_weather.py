@@ -24,7 +24,7 @@ def update():
     time.sleep(5)
     
 def ret():
-    os.system("python3 pitft_nav.py")
+    os.system("pkill python3; python3 pitft_nav.py")
 
 update()
 
