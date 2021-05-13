@@ -5,12 +5,10 @@ from datetime import datetime
 
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 135//2)
 
-image = Image.new("RGB", (width, height))
-draw = ImageDraw.Draw(image)
+def ret():
+    import pitft_nav
 
-def clear():
-    draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-    display.image(image)
+btnDown.when_pressed = ret
 
 while 1:
     now = datetime.now()
