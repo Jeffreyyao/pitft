@@ -1,6 +1,7 @@
 from pitft_setup import *
 from PIL import Image, ImageDraw, ImageFont
 import time
+from signal import pause
 
 options = ["Time","Weather","Blog Gallery","Pi Status"]
 count = 4
@@ -40,3 +41,4 @@ init()
 
 btnUp.when_pressed = dec
 btnDown.when_pressed = inc
+pause()
