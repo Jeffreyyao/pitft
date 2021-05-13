@@ -40,7 +40,7 @@ def btnUp_released():
         curr_idx = curr_idx-1 if curr_idx!=0 else count-1
         choose(curr_idx,prev_idx)
     else:
-        exec(open(scripts[i]).read())
+        exec(open(scripts[curr_idx]).read())
             
 
 def btnDown_released():
