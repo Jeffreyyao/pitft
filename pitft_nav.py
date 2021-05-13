@@ -2,6 +2,7 @@ from pitft_setup import *
 from PIL import Image, ImageDraw, ImageFont
 import time
 from signal import pause
+import os
 
 options = ["Time","Weather","Blog Gallery","Pi Stats"]
 scripts = ["pitft_time.py","pitft_weather.py","pitft_blog_gallery.py","pitft_stats.py"]
@@ -44,7 +45,7 @@ def btnUp_released():
         if curr_idx == 0:
             import pitft_time
         elif curr_idx == 1:
-            import pitft_weather
+            os.system("pkill python3; python3 pitft_weather.py")
         elif curr_idx == 2:
             import pitft_blog_gallery
         else:
