@@ -17,7 +17,6 @@ def init():
     time.sleep(1)
 
 def choose(index,prev_index):
-    clear()
     draw.text((20,135//5*(index+1)), options[index], font=font, fill="#0000FF")
     draw.text((20,135//5*(prev_index+1)), options[prev_index], font=font, fill="#FFFFFF")
     display.image(image)
