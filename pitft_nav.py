@@ -35,7 +35,7 @@ def pressed():
 def btnUp_released():
     global prev_idx
     global curr_idx
-    if time.time()-prev_time < 3:
+    if time.time()-prev_time < 2:
         prev_idx = curr_idx
         curr_idx = curr_idx-1 if curr_idx!=0 else count-1
         choose(curr_idx,prev_idx)
