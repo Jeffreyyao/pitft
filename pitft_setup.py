@@ -11,6 +11,9 @@ from PIL import Image, ImageDraw, ImageFont
 
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 20)
 
+width = 240
+height = 135
+
 image = Image.new("RGB", (width, height))
 draw = ImageDraw.Draw(image)
  
@@ -36,9 +39,6 @@ display = st7789.ST7789(
     y_offset=40,
     rotation=90
 )
-
-width = 240
-height = 135
 
 def clear():
     draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
