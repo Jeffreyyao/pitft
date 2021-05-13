@@ -6,6 +6,11 @@ import gpiozero
  
 from adafruit_rgb_display.rgb import color565
 import adafruit_rgb_display.st7789 as st7789
+
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 20)
+
+image = Image.new("RGB", (width, height))
+draw = ImageDraw.Draw(image)
  
 # Up and Down Buttons
 btnUp = gpiozero.Button(23)
