@@ -30,6 +30,7 @@ def choose(index,prev_index):
     time.sleep(0.2)
     
 def pressed():
+    global prev_time
     prev_time = time.time()
     
 def btnUp_released():
