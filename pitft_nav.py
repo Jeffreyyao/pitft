@@ -41,11 +41,13 @@ def btnUp_released():
         choose(curr_idx,prev_idx)
     else:
         if curr_idx == 0:
-            print("hha")
+            import pitft_time
         elif curr_idx == 1:
             import pitft_weather
+        elif curr_idx == 2:
+            import pitft_blog_gallery
         else:
-            print("lala")
+            import pitft_stats
             
 
 def btnDown_released():
