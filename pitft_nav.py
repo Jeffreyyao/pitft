@@ -1,11 +1,6 @@
 from pitft_setup import *
 from PIL import Image, ImageDraw, ImageFont
 
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 20)
-
-image = Image.new("RGB", (width, height))
-draw = ImageDraw.Draw(image)
-
 options = ["Time","Weather","Blog Gallery","Pi Status"]
 count = 4
 curr_idx = 0
