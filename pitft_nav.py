@@ -32,7 +32,7 @@ def choose(index,prev_index):
 def pressed():
     prev_time = time.time()
     
-def btnUp_release():
+def btnUp_released():
     global prev_idx
     global curr_idx
     if time.time()-prev_time < 3:
@@ -43,7 +43,7 @@ def btnUp_release():
         exec(open(scripts[i]).read())
             
 
-def btnDown_release():
+def btnDown_released():
     global prev_idx
     global curr_idx
     prev_idx = curr_idx
@@ -53,7 +53,7 @@ def btnDown_release():
 init()
 
 btnUp.when_pressed = pressed
-btnUp.when_release = btnUp_release
-btnDown.when_release = btnDown_release
+btnUp.when_released = btnUp_released
+btnDown.when_released = btnDown_released
 
 pause()
