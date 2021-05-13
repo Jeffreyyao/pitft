@@ -3,10 +3,12 @@ from PIL import Image, ImageDraw, ImageFont
 import time
 from signal import pause
 
-options = ["Time","Weather","Blog Gallery","Pi Status"]
+options = ["Time","Weather","Blog Gallery","Pi Stats"]
+scripts = ["pitft_time.py","pitft_weather.py","pitft_blog_gallery.py","pitft_stats.py"]
 count = 4
 curr_idx = 0
 prev_idx = 0
+prev_time = 0
 
 def init():
     clear()
@@ -27,14 +29,21 @@ def choose(index,prev_index):
     display.image(image)
     time.sleep(0.2)
     
-def dec():
+def pressed():
+    prev_time = time.time()
+    
+def btnUp_release():
     global prev_idx
     global curr_idx
-    prev_idx = curr_idx
-    curr_idx = curr_idx-1 if curr_idx!=0 else count-1
-    choose(curr_idx,prev_idx)
+    if time.time()-prev_time < 3:
+        prev_idx = curr_idx
+        curr_idx = curr_idx-1 if curr_idx!=0 else count-1
+        choose(curr_idx,prev_idx)
+    else:
+        exec(open(scripts[i]).read())
+            
 
-def inc():
+def btnDown_release():
     global prev_idx
     global curr_idx
     prev_idx = curr_idx
@@ -43,6 +52,8 @@ def inc():
     
 init()
 
-btnUp.when_pressed = dec
-btnDown.when_pressed = inc
+btnUp.when_pressed = pressed
+btnUp.when_release = btnUp_release
+btnDown.when_release = btnDown_release
+
 pause()
