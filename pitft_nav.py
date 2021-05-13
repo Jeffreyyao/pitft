@@ -5,6 +5,7 @@ import time
 options = ["Time","Weather","Blog Gallery","Pi Status"]
 count = 4
 curr_idx = 0
+prev_idx = 0
 
 def init():
     clear()
@@ -24,14 +25,18 @@ def choose(index,prev_index):
     draw.text((20,135//5*(prev_index+1)-15), options[prev_index], font=font, fill="#FFFFFF")
     display.image(image)
     time.sleep(0.5)
+    
+def dec():
+    prev_idx = curr_idx
+    curr_idx = curr_idx-1 if curr_idx!=0 else count-1
+    choose(curr_idx,prev_idx)
 
+def inc():
+    prev_idx = curr_idx
+    curr_idx = curr_idx+1 if curr_idx!=count-1 else 0
+    choose(curr_idx,prev_idx)
+    
 init()
-while 1:
-    if btnUp.is_pressed:
-        prev_idx = curr_idx
-        curr_idx = curr_idx-1 if curr_idx!=0 else count-1
-        choose(curr_idx,prev_idx)
-    elif btnDown.is_pressed:
-        prev_idx = curr_idx
-        curr_idx = curr_idx+1 if curr_idx!=count-1 else 0
-        choose(curr_idx,prev_idx)
+
+btnUp.when_pressed = dec
+btnDown.when_pressed = inc
