@@ -28,11 +28,15 @@ def choose(index,prev_index):
     time.sleep(0.5)
     
 def dec():
+    global prev_idx
+    global curr_idx
     prev_idx = curr_idx
     curr_idx = curr_idx-1 if curr_idx!=0 else count-1
     choose(curr_idx,prev_idx)
 
 def inc():
+    global prev_idx
+    global curr_idx
     prev_idx = curr_idx
     curr_idx = curr_idx+1 if curr_idx!=count-1 else 0
     choose(curr_idx,prev_idx)
