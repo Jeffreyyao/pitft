@@ -6,15 +6,6 @@ import urllib.request as req
 import re
 import requests
 
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf", 20)
-
-image = Image.new("RGB", (width, height))
-draw = ImageDraw.Draw(image)
-
-def clear():
-    draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-    display.image(image)
-
 def update():
     req_url = "http://api.weatherapi.com/v1/current.json?key=c5fbb5f073b64c74ad651622211105&q=Boulder&aqi=no"
     res = req.urlopen(req_url).read()
