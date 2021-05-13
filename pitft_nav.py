@@ -1,5 +1,6 @@
 from pitft_setup import *
 from PIL import Image, ImageDraw, ImageFont
+import time
 
 options = ["Time","Weather","Blog Gallery","Pi Status"]
 count = 4
@@ -13,7 +14,7 @@ def choose(index):
         else:
             draw.text((20,135//5*(i+1)), options[i], font=font, fill="#FFFFFF")
     display.image(image)
-    sleep(1)
+    time.sleep(1)
 
 choose(0)
 while 1:
