@@ -10,15 +10,15 @@ def init():
     clear()
     for i in range(4):
         if i==0:
-            draw.text((20,135//5*(i+1)), options[i], font=font, fill="#0000FF")
+            draw.text((20,135//5*(i+1)-10), options[i], font=font, fill="#0000FF")
         else:
-            draw.text((20,135//5*(i+1)), options[i], font=font, fill="#FFFFFF")
+            draw.text((20,135//5*(i+1)-10), options[i], font=font, fill="#FFFFFF")
     display.image(image)
     time.sleep(1)
 
 def choose(index,prev_index):
-    draw.text((20,135//5*(index+1)), options[index], font=font, fill="#0000FF")
-    draw.text((20,135//5*(prev_index+1)), options[prev_index], font=font, fill="#FFFFFF")
+    draw.text((20,135//5*(index+1)-10), options[index], font=font, fill="#0000FF")
+    draw.text((20,135//5*(prev_index+1)-10), options[prev_index], font=font, fill="#FFFFFF")
     display.image(image)
     time.sleep(0.5)
 
