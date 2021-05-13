@@ -40,7 +40,12 @@ def btnUp_released():
         curr_idx = curr_idx-1 if curr_idx!=0 else count-1
         choose(curr_idx,prev_idx)
     else:
-        exec(open(scripts[curr_idx]).read())
+        if curr_idx == 0:
+            print("hha")
+        elif curr_idx == 1:
+            import pitft_weather
+        else:
+            print("lala")
             
 
 def btnDown_released():
