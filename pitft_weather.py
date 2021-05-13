@@ -6,6 +6,7 @@ import urllib.request as req
 import re
 import requests
 from signal import pause
+import os
 
 def update():
     req_url = "http://api.weatherapi.com/v1/current.json?key=c5fbb5f073b64c74ad651622211105&q=Boulder&aqi=no"
@@ -23,7 +24,7 @@ def update():
     time.sleep(5)
     
 def ret():
-    import pitft_nav
+    os.system("python3 pitft_nav.py")
 
 update()
 
