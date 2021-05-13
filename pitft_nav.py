@@ -10,7 +10,8 @@ def init():
     clear()
     for i in range(4):
         if i==0:
-            draw.text((20,135//5*(i+1)-15), options[i], font=font, fill="#0000FF")
+            draw.rectangle([0,135//5*(i+1)-15,width,135//5*(i+1)-15+20], fill="#FFFFFF)
+            draw.text((20,135//5*(i+1)-15), options[i], font=font, fill="#000000")
         else:
             draw.text((20,135//5*(i+1)-15), options[i], font=font, fill="#FFFFFF")
     display.image(image)
