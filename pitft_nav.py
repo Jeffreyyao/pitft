@@ -20,7 +20,7 @@ def choose(index,prev_index):
     draw.text((20,135//5*(index+1)), options[index], font=font, fill="#0000FF")
     draw.text((20,135//5*(prev_index+1)), options[prev_index], font=font, fill="#FFFFFF")
     display.image(image)
-    time.sleep(1)
+    time.sleep(0.5)
 
 init()
 while 1:
