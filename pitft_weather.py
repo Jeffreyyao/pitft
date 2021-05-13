@@ -5,6 +5,7 @@ from datetime import datetime
 import urllib.request as req
 import re
 import requests
+from signal import pause
 
 def update():
     req_url = "http://api.weatherapi.com/v1/current.json?key=c5fbb5f073b64c74ad651622211105&q=Boulder&aqi=no"
@@ -19,10 +20,14 @@ def update():
     draw.text((20,135//5*2), temp, font=font, fill="#FFFFFF")
     draw.bitmap((100,135//5*2),Image.open(requests.get(icon, stream=True).raw))
     display.image(image)
+    time.sleep(5)
+    
+def ret():
+    import pitft_nav
 
 update()
 
-while 1:
-    if btnUp.is_pressed or btnDown.is_pressed:
-        update()
-        time.sleep(5)
+btnUp.when_pressed = update
+btnDown.when_pressed = ret
+
+pause()
