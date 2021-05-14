@@ -72,7 +72,6 @@ def ret():
     btnDown.when_pressed = None
     btnDown.when_released = btnDown_released
     print("returned")
-    pause()
     
 init()
 
