@@ -21,6 +21,6 @@ def weather_update():
     draw.text((20,135//5*2), temp, font=font, fill="#FFFFFF")
     draw.bitmap((100,135//5*2),Image.open(requests.get(icon, stream=True).raw))
     display.image(image)
-    time.sleep(5)
+    time.sleep(2)
     
 weather_update()
