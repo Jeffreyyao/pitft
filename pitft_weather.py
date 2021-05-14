@@ -30,5 +30,3 @@ update()
 
 btnUp.when_pressed = update
 btnDown.when_pressed = ret
-
-pause()
