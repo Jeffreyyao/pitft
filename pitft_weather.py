@@ -1,4 +1,3 @@
-from pitft_setup import *
 from PIL import Image, ImageDraw, ImageFont
 import time
 from datetime import datetime
