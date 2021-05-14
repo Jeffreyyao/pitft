@@ -45,7 +45,9 @@ def btnUp_released():
         if curr_idx == 0:
             import pitft_time
         elif curr_idx == 1:
-            os.system("pkill python3; python3 pitft_weather.py")
+            from pitft_weather import weather_update
+            btnUp.when_pressed = weather_update
+            btnDown.when_pressed = ret
         elif curr_idx == 2:
             import pitft_blog_gallery
         else:
@@ -58,6 +60,13 @@ def btnDown_released():
     prev_idx = curr_idx
     curr_idx = curr_idx+1 if curr_idx!=count-1 else 0
     choose(curr_idx,prev_idx)
+    
+def ret():
+    init()
+    btnUp.when_pressed = pressed
+    btnUp.when_released = btnUp_released
+    btnDown.when_released = btnDown_released
+    pause()
     
 init()
 
