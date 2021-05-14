@@ -8,7 +8,7 @@ import requests
 from signal import pause
 import os
 
-def update():
+def weather_update():
     req_url = "http://api.weatherapi.com/v1/current.json?key=c5fbb5f073b64c74ad651622211105&q=Boulder&aqi=no"
     res = req.urlopen(req_url).read()
 
@@ -23,10 +23,4 @@ def update():
     display.image(image)
     time.sleep(5)
     
-def ret():
-    os.system("pkill python3; python3 pitft_nav.py")
-
-update()
-
-btnUp.when_pressed = update
-btnDown.when_pressed = ret
+weather_update()
