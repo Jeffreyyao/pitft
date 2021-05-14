@@ -69,6 +69,7 @@ def ret():
     init()
     btnUp.when_pressed = pressed
     btnUp.when_released = btnUp_released
+    btnDown.when_pressed = None
     btnDown.when_released = btnDown_released
     print("returned")
     pause()
