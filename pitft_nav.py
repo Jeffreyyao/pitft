@@ -13,6 +13,10 @@ prev_time = 0
 
 def init():
     clear()
+    global curr_idx
+    global prev_idx
+    curr_idx = 0
+    prev_idx = 0
     for i in range(4):
         if i==0:
             draw.rectangle([0,135//5*(i+1)-15,width,135//5*(i+1)-15+20], fill="#FFFFFF")
@@ -66,6 +70,7 @@ def ret():
     btnUp.when_pressed = pressed
     btnUp.when_released = btnUp_released
     btnDown.when_released = btnDown_released
+    print("returned")
     pause()
     
 init()
