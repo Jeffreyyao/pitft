@@ -22,5 +22,6 @@ def weather_update():
     draw.bitmap((100,135//5*2),Image.open(requests.get(icon, stream=True).raw))
     display.image(image)
     time.sleep(2)
-    
-weather_update()
+
+if __name__=="__main__":
+    weather_update()
