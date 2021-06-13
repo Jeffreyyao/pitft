@@ -1,4 +1,4 @@
-from pitft_setup import *
+from pitft_setup import display,image,draw,font,btnUp,btnDown,clear,width,height
 from PIL import Image, ImageDraw, ImageFont
 import time
 from signal import pause
