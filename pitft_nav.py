@@ -17,6 +17,7 @@ def init():
     global prev_idx
     curr_idx = 0
     prev_idx = 0
+    prev_time = time.time()
     for i in range(4):
         if i==0:
             draw.rectangle([0,135//5*(i+1)-15,width,135//5*(i+1)-15+20], fill="#FFFFFF")
@@ -47,6 +48,7 @@ def btnUp_released():
         choose(curr_idx,prev_idx)
     else:
         if curr_idx == 0:
+            print("starting pitft_time")
             import pitft_time
         elif curr_idx == 1:
             from pitft_weather import weather_update
