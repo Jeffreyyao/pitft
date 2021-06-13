@@ -10,9 +10,6 @@ import board
 from PIL import Image, ImageDraw, ImageFont
 
 def stats_update(display,image,draw):
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=(0, 0, 0))
-    display.image(image)
     # Draw some shapes.
     # First define some constants to allow easy resizing of shapes.
     padding = -2
@@ -25,10 +22,7 @@ def stats_update(display,image,draw):
     # Alternatively load a TTF font.  Make sure the .ttf font file is in the
     # same directory as the python script!
     # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)
-
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)\
 
     # Shell scripts for system monitoring from here:
     # https://unix.stackexchange.com/questions/119126/command-to-display-memory-usage-disk-usage-and-cpu-load
