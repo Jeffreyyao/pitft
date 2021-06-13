@@ -51,18 +51,19 @@ def btnUp_released():
             from pitft_time import time_update
             clear()
             time_update(display,image,draw)
-            btnUp.when_pressed = ret
             btnDown.when_pressed = ret
         elif curr_idx == 1:
             from pitft_weather import weather_update
             clear()
             weather_update(display,image,draw,font)
-            btnUp.when_pressed = ret
             btnDown.when_pressed = ret
         elif curr_idx == 2:
             import pitft_blog_gallery
         else:
-            import pitft_stats
+            from pitft_stats import stats_update
+            clear()
+            stats_update(display,image,draw)
+            btnDown.when_pressed = ret
             
 
 def btnDown_released():
