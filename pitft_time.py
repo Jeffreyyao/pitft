@@ -1,4 +1,3 @@
-from pitft_setup import *
 from PIL import Image, ImageDraw, ImageFont
 import time
 from datetime import datetime
@@ -10,10 +9,9 @@ def ret():
 
 btnDown.when_pressed = ret
 
-while 1:
+def time_update(display,image,draw):
     now = datetime.now()
     current_time = now.strftime("%H:%M")
     clear()
     draw.text((20,135//5), current_time, font=font, fill="#FFFFFF")
     display.image(image)
-    time.sleep(60)
