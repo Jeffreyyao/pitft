@@ -4,7 +4,7 @@ import urllib.request as req
 import re
 import requests
 
-def weather_update(display,draw,font):
+def weather_update(display,image,draw,font):
     req_url = "http://api.weatherapi.com/v1/current.json?key=c5fbb5f073b64c74ad651622211105&q=Boulder&aqi=no"
     res = req.urlopen(req_url).read()
 
