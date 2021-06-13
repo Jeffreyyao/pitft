@@ -48,8 +48,11 @@ def btnUp_released():
         choose(curr_idx,prev_idx)
     else:
         if curr_idx == 0:
-            print("starting pitft_time")
-            import pitft_time
+            from pitft_time import time_update
+            clear()
+            time_update(display,image,draw)
+            btnUp.when_pressed = ret
+            btnDown.when_pressed = ret
         elif curr_idx == 1:
             from pitft_weather import weather_update
             clear()
