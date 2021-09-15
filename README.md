@@ -1,5 +1,5 @@
 # pitft
-Useful tools/scripts for the Raspberry Pi pitft made by Adafruit
+Useful tools/scripts for the Raspberry Pi pitft produced by Adafruit
 
 
 ## Dependencies
